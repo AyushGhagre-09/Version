@@ -1,0 +1,24 @@
+<#
+    ///
+    /// Master product version information template header.
+    ///
+    /// This template header is used by all the version info generators.
+    ///
+    /// NOTE: The master product version information in this file is only to be updated by the leads.
+    ///
+
+    /// <summary>Major product version number. Currently, this is fixed at 1 and is not changed.</summary>
+    const ushort MajorVersion = 1;
+
+    /// <sumamry>Major product version number for Harmony Agent. This is fixed at 2 and is not changed.</summary>
+    const ushort HarmonyMajorVersion = 2;
+
+    /// <summary>Minor product version number. Historically, this is bumped up at the beginning of the year.</summary>
+    const ushort MinorVersion = 15;
+
+    /// <summary>
+    /// Product version release number. This is bumped up with each release inside a year and reset back to 0 at the
+    /// beginning of the year with the first release of the year.  
+    /// </summary>
+    const ushort ReleaseVersion = 5;
+#>
