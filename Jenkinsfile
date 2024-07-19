@@ -8,7 +8,7 @@ node
 {
 	stage("checkout")
 	{
-		 checkout scm
+		 
         bat 'git branch'
         bat 'git checkout main'
         bat 'git branch'
@@ -22,7 +22,9 @@ node
 		print(fileContent)
 
 		def updatedContent = fileContent.replaceAll(/const ushort ReleaseVersion = \d+;/, "const ushort ReleaseVersion = ${params.RELEASE_VERSION};")
-        print(updatedContent)
+                print(updatedContent)
+		// Write the updated content back to the file
+        writeFile(file: '_MasterProductVersion.tt', text: updatedContent)
 
 	}
 	 stage('Commit and Push Changes') {
