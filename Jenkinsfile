@@ -6,6 +6,12 @@ properties([
     
 node
 {
+	if(params.RELEASE_VERSION.isEmpty())
+	{
+
+	  print 'enter the release version'
+		return 
+	}
 	stage("checkout")
 	{
 		 
