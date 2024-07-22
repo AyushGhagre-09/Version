@@ -23,10 +23,10 @@ node {
 
         stage('Update Release Version') {
             def fileContent = readFile('_MasterProductVersion.tt')
-            print(fileContent)
+            print("original file content : ${fileContent}")
 
             def updatedContent = fileContent.replaceAll(/const ushort ReleaseVersion = \d+;/, "const ushort ReleaseVersion = ${params.RELEASE_VERSION};")
-            print(updatedContent)
+            print("updated file content : ${updatedContent}")
 
             // Write the updated content back to the file
             writeFile(file: '_MasterProductVersion.tt', text: updatedContent)
