@@ -20,5 +20,5 @@
     /// Product version release number. This is bumped up with each release inside a year and reset back to 0 at the
     /// beginning of the year with the first release of the year.  
     /// </summary>
-    const ushort ReleaseVersion = 8;
+    const ushort ReleaseVersion = 1;
 #>
